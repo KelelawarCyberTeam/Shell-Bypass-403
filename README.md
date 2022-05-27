@@ -1,9 +1,15 @@
 # Shell-Bypass-403
 
 
-#Demo: byp.php
-<img src="https://b.top4top.io/p_2240atjle0.png" width="350" height="350" alt="kelelawar cyber team">
+#Demo: bypass403.php
+<img src="https://a.top4top.io/p_2338nce3x0.jpg" width="300" height="300" alt="kelelawar cyber team">
 <br><br>
-#Demo: bypass.php
-<img src="https://l.top4top.io/p_2293g9iwj1.png" width="350" height="350" alt="kelelawar cyber team">
-<br><br>
+* Fitur shell?
+- Create File
+- Create Folder
+- Delete Directory
+- File Download
+- Multiple File Upload
+- Bypass 403 Forbidden
+- Bypass Imunify360
+- Bypass 406 Not Acceptable
